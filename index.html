@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before After</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <style>
+      /* prieš esamą turinį kažką patalpinti */
+      h1::before {
+        content: "Tekstas einantis prieš ";
+        display: block;
+        width: 150px;
+        height: 150px;
+        background-color: yellow;
+      }
+      /* po esamo turinio kažką patalpinti */
+      h1::after {
+        content: "\722";
+        font-family: "bootstrap-icon";
+        display: block;
+        width: 150px;
+        height: 150px;
+        background-color: turquoise;
+      }
+
+      .box {
+        height: 200px;
+        width: 200px;
+        margin: 50px auto;
+      }
+      /* 1 2 3 4 5 */
+      /* 1 - šešėlio pozicija iš kairės */
+      /* 2 - šešėlio pozicija iš viršaus */
+      /* 3 - šešėlio išplėtimas */
+      /* 4 - šešėlio išsiskaidymas, sklaida*/
+      /* 5 - spalva */
+      .outer-shadow {
+        background-color: crimson;
+        box-shadow: 5px 5px 5px 5px black;
+        border-radius: 50px;
+      }
+
+      .inner-shadow {
+        background-color: darkgreen;
+        box-shadow: inset 5px 5px 5px 5px black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <!-- JPG formatas - nepavyks pakeisti fono spalvos -->
+    <!-- PNG formatas - pavyks pakeisti fono spalvą, bet keičiant ikonos dydį pastebėsime kokybės trūkumą, pixeliuosis -->
+    <!-- SVG formatas - superinis variantas-->
+    <!-- PNG, SVG - 'fill' atributas užpildo ikoną -->
+    <!-- Border-radius tema -->
+
+    <!-- box shadow -->
+    <div class="box outer-shadow"></div>
+    <div class="box inner-shadow"></div>
+  </body>
+</html>
